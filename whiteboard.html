@@ -1,48 +1,79 @@
 <html>
+
 <head>
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <title>CIC Virtual Whiteboard</title>
 </head>
+
 <body>
-    <div class="col-md-12"><p id="wb_title">CIC Whiteboard</p></div>
+    <div class="col-md-12">
+        <p id="wb_title">CIC Whiteboard</p>
+    </div>
     <div class="container-fluid">
         <div class="row" id="whiteboard">
-            
+            <div class="col-md-3 stickynote">
+                <div class="row">
+                    <button class="col-sm-5 edit_Sticky">y</button>
+                    <button class="col-sm-5 delete_Sticky">x</button>
+                    <div class="col-md-12">
+                        <iframe width="280" height="200"
+                            src="https://www.youtube.com/embed/tBmTY5tlt1g?autoplay=0&mute=1">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 stickynote">
+                <div class="row">
+                    <button class="col-sm-5 edit_Sticky">y</button>
+                    <button class="col-sm-5 delete_Sticky">x</button>
+                    <div class="col-md-12">
+                        <video width="280" height="200" preload="auto" autoplay loop controls=1 volume="0">
+                            <source src="Videos\Pigeon.mp4" type="video/mp4">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row open_Taskbar">
         <div class="col-md-3"></div>
-        <div class="col-md-2"> <button onclick="document.getElementById('Taskbar_operator').style.display='block'" style="width:auto; border-radius: 50%;">Login</button></div>
+        <div class="col-md-2"> <button onclick="document.getElementById('Taskbar_operator').style.display='block'"
+                style="width:auto; border-radius: 50%;">Login</button></div>
         <button class="marker_btns col-md-1" id="color_green" style="background-color: rgb(60, 138, 60);"></button>
         <button class="marker_btns col-md-1" id="color_yellow" style="background-color: rgb(162, 180, 57);"></button>
         <button class="marker_btns col-md-1" id="color_blue" style="background-color: rgb(69, 105, 172);"></button>
-        <button class="col-md-1 createStickyNote" style="margin: 5px; border-radius: 80%;" id="createText_btn">Sticky Note</button>
-        <button class="col-md-1 createStickyNote" style="margin: 5px; border-radius: 80%;" id="createImg_btn">Sticky Image</button>
-        <button class="col-md-1 createStickyNote" style="margin: 5px; border-radius: 80%;" id="createVideo_btn">Stixky Video</button>   
+        <button class="col-md-1 createStickyNote" style="margin: 5px; border-radius: 80%;" id="createText_btn">Sticky
+            Note</button>
+        <button class="col-md-1 createStickyNote" style="margin: 5px; border-radius: 80%;" id="createImg_btn">Sticky
+            Image</button>
+        <button class="col-md-1 createStickyNote" style="margin: 5px; border-radius: 80%;" id="createVideo_btn">Stixky
+            Video</button>
+        <button class="col-md-1 createStickyNote" style="margin: 5px; border-radius: 80%;" id="createYouTube">Sticky
+            YouTube</button>
     </div>
     <div class="modal" id="Taskbar_operator">
         <form class="modal-content animate">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>What kind of sticky would you like to create?</p>
-                    </div>
-                    <div class="col-md-12">
-                        <button class="edit_sticky_panel" id="sticky_text">Add plain text</button>
-                    </div>
-                    <div class="col-md-12">
-                        <input name="" value="Tester" class="edit_sticky_panel" type="file" id="sticky_image" name="files[]" multiple />
-                        <button class="edit_sticky_panel" id="sticky_image">Attach image to sticky</button>
-                    </div>
-                    <div class="col-md-12">
-                        <button class="edit_sticky_panel" id="sticky_video">Attach Video to sticky</button>
-                    </div>
+                <div class="col-md-10">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+                <div class="col-md-2">
+                    <span onclick="document.getElementById('Taskbar_operator').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
                 </div>
             </div>
         </form>
     </div>
-
     <script src="javascript/whiteboard_handler.js"></script>
 </body>
+
 </html>

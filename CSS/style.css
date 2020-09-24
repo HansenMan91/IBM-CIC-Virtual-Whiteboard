@@ -43,6 +43,7 @@ body{
     padding-left: 5px;
     width: 7%;
     position: absolute;
+    z-index: 1;
 }
 .edit_Sticky{
     right: 0%;
@@ -94,6 +95,7 @@ body{
     font-size: 24;
     background-color: transparent;
     height: 90%;
+    bottom: 0%;
 }
 .createImg_btn{
     height: 200px;
