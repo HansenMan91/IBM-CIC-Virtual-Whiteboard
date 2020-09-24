@@ -51,6 +51,7 @@ function CreateStickyNote(stickyType) {
             imgSticky(rowElement);
             break;
         case "createVideo_btn":
+            videoSticky(rowElement)
             break;
         case "createYouTube":
             yt_Sticky(rowElement);
@@ -72,7 +73,7 @@ function imgSticky(stickyNote_div) {
     img_container.className = "col-md-12";
     var img_file = document.createElement("img");
     img_file.className = "createImg_btn";
-    img_file.src = "";
+    img_file.src = "Images/download.jpg";
     img_container.appendChild(img_file);
     stickyNote_div.appendChild(img_container);
 }
@@ -84,13 +85,11 @@ function videoSticky(stickyNote_div) {
     video_file.width = "280";
     video_file.height = "200";
     video_file.preload = "auto";
-    video_file.autoplay = "true";
-    video_file.loop = "true";
     video_file.muted = "muted";
     video_file.controls = 1;
     video_file.volume = "0";
     var video_src = document.createElement("source");
-    video_src.src = "";
+    video_src.src = "Videos/Pigeon.mp4";
     video_src.type = "video/mp4";
     video_container.appendChild(video_file);
     video_container.appendChild(video_src);
