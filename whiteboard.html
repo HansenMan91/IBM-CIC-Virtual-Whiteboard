@@ -8,12 +8,7 @@
     <div class="col-md-12"><p id="wb_title">CIC Whiteboard</p></div>
     <div class="container-fluid">
         <div class="row" id="whiteboard">
-            <div class="col-md-3 stickynote">
-                <div class="row">
-                    <button class="col-sm-5 edit_Sticky">y</button>
-                    <button class="col-sm-5 delete_Sticky">x</button>
-                </div>
-            </div>
+            
         </div>
     </div>
     <div class="row open_Taskbar">
@@ -22,14 +17,28 @@
         <button class="marker_btns col-md-1" id="color_green" style="background-color: rgb(60, 138, 60);"></button>
         <button class="marker_btns col-md-1" id="color_yellow" style="background-color: rgb(162, 180, 57);"></button>
         <button class="marker_btns col-md-1" id="color_blue" style="background-color: rgb(69, 105, 172);"></button>
-        <button class="col-md-1" style="margin-left: 10px;" id="createNote_btn">Create Sticky</button>   
+        <button class="col-md-1 createStickyNote" style="margin: 5px; border-radius: 80%;" id="createText_btn">Sticky Note</button>
+        <button class="col-md-1 createStickyNote" style="margin: 5px; border-radius: 80%;" id="createImg_btn">Sticky Image</button>
+        <button class="col-md-1 createStickyNote" style="margin: 5px; border-radius: 80%;" id="createVideo_btn">Stixky Video</button>   
     </div>
     <div class="modal" id="Taskbar_operator">
         <form class="modal-content animate">
             <div class="container">
                 <div class="row">
+                    <div class="col-md-12">
+                        <p>What kind of sticky would you like to create?</p>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="edit_sticky_panel" id="sticky_text">Add plain text</button>
+                    </div>
+                    <div class="col-md-12">
+                        <input name="" value="Tester" class="edit_sticky_panel" type="file" id="sticky_image" name="files[]" multiple />
+                        <button class="edit_sticky_panel" id="sticky_image">Attach image to sticky</button>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="edit_sticky_panel" id="sticky_video">Attach Video to sticky</button>
+                    </div>
                 </div>
-
             </div>
         </form>
     </div>

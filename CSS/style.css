@@ -87,3 +87,21 @@ body{
     visibility: visible;
     opacity: 1;
   }
+.edit_sticky_panel{
+    width: 30%;
+}
+.createText_btn{
+    font-size: 24;
+    background-color: transparent;
+    height: 90%;
+}
+.createImg_btn{
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.createVideo_btn{
+    width: 200px !important;
+    height: 200px !important;
+}
